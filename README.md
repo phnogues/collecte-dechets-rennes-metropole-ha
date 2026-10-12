@@ -6,13 +6,13 @@
 
 Intégration Home Assistant qui affiche les jours de collecte des **ordures ménagères (bac gris)** et des **déchets recyclables (bac jaune)** pour les 43 communes de Rennes Métropole et les quartiers de Rennes.
 
-## Démo
-https://github.com/user-attachments/assets/3e69c0be-e278-4a1d-b720-ef1f48512f86
-
-
 Les données proviennent des calendriers PDF publiés chaque année par la métropole sur [dechets.metropole.rennes.fr](https://dechets.metropole.rennes.fr/ou-et-comment-jeter-vos-dechets/). Un script les convertit en un fichier `data/collectes.json`, que l'intégration télécharge.
 
 > Les calendriers concernent les **maisons disposant de bacs roulants**. Le centre-ville de Rennes (Q1) et l'habitat collectif n'ont pas de calendrier publié.
+
+## Démo
+
+https://github.com/user-attachments/assets/3e69c0be-e278-4a1d-b720-ef1f48512f86
 
 ## Installation (HACS)
 
