@@ -1,0 +1,25 @@
+# Tests du script de conversion, de la logique de calendrier et de l'intégration dans Home Assistant.
+name: Tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+          cache-dependency-path: tools/requirements*.txt
+      - name: Dépendances
+        run: pip install -r tools/requirements.txt -r tools/requirements-ha.txt
+      - name: Pytest
+        run: python -m pytest -q

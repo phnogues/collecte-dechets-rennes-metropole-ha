@@ -1,0 +1,2 @@
+# Tests avec Home Assistant (Linux, Python >= 3.14)
+pytest-homeassistant-custom-component

@@ -1,0 +1,77 @@
+{
+  "config": {
+    "step": {
+      "source": {
+        "title": "Data source",
+        "description": "The collection file could not be loaded from the default address. Enter the URL of the collectes.json file (or a local path, e.g. /config/collectes.json).",
+        "data": {
+          "data_url": "Data file URL"
+        }
+      },
+      "zone": {
+        "title": "Your collection area",
+        "description": "Choose your town or, in Rennes, your district.",
+        "data": {
+          "zone": "Area"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to download the data file.",
+      "invalid_data": "The data file does not have the expected format.",
+      "no_zones": "The data file does not contain any area."
+    },
+    "abort": {
+      "already_configured": "This area is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "reminder_time": "\"Put the bin out\" reminder time (the day before)",
+          "data_url": "Data file URL"
+        },
+        "data_description": {
+          "reminder_time": "The \"Put the bin out\" sensor turns on at this time the day before the collection, and turns off when the collection starts.",
+          "data_url": "http(s) URL of the collectes.json file, or a local path."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to download the data file.",
+      "invalid_data": "The data file does not have the expected format.",
+      "zone_missing": "Your area does not exist in this data file."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "take_out_bin": {
+        "name": "Put the bin out"
+      }
+    },
+    "calendar": {
+      "collections": {
+        "name": "Collections"
+      }
+    },
+    "sensor": {
+      "ordures_menageres": {
+        "name": "Household waste"
+      },
+      "recyclables": {
+        "name": "Recyclables"
+      },
+      "next_collection": {
+        "name": "Next collection"
+      }
+    }
+  },
+  "issues": {
+    "data_outdated": {
+      "title": "Outdated collection calendar ({zone})",
+      "description": "The collection calendar for {zone} has no upcoming dates (valid until {valid_until}). Publish the new collectes.json file at {url}, or change the URL in the integration options."
+    }
+  }
+}

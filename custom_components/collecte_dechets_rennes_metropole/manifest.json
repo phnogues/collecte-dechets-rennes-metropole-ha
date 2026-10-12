@@ -1,0 +1,12 @@
+{
+  "domain": "collecte_dechets_rennes_metropole",
+  "name": "Collecte Déchets Rennes Métropole",
+  "codeowners": ["@phnogues"],
+  "config_flow": true,
+  "documentation": "https://github.com/phnogues/collecte-dechets-rennes-metropole-ha",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/phnogues/collecte-dechets-rennes-metropole-ha/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

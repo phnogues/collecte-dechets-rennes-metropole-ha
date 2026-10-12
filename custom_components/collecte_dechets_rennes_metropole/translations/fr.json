@@ -1,0 +1,77 @@
+{
+  "config": {
+    "step": {
+      "source": {
+        "title": "Source des données",
+        "description": "Le fichier des collectes n'a pas pu être chargé depuis l'adresse par défaut. Indiquez l'URL du fichier collectes.json (ou un chemin local, ex. /config/collectes.json).",
+        "data": {
+          "data_url": "URL du fichier de données"
+        }
+      },
+      "zone": {
+        "title": "Votre zone de collecte",
+        "description": "Choisissez votre commune ou, à Rennes, votre quartier.",
+        "data": {
+          "zone": "Zone"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossible de télécharger le fichier de données.",
+      "invalid_data": "Le fichier de données n'a pas le format attendu.",
+      "no_zones": "Le fichier de données ne contient aucune zone."
+    },
+    "abort": {
+      "already_configured": "Cette zone est déjà configurée."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "reminder_time": "Heure du rappel « Sortir le bac » (la veille)",
+          "data_url": "URL du fichier de données"
+        },
+        "data_description": {
+          "reminder_time": "Le capteur « Sortir le bac » s'active la veille de la collecte à cette heure, et se désactive au début de la collecte.",
+          "data_url": "URL http(s) du fichier collectes.json, ou chemin local."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossible de télécharger le fichier de données.",
+      "invalid_data": "Le fichier de données n'a pas le format attendu.",
+      "zone_missing": "Votre zone n'existe pas dans ce fichier de données."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "take_out_bin": {
+        "name": "Sortir le bac"
+      }
+    },
+    "calendar": {
+      "collections": {
+        "name": "Collectes"
+      }
+    },
+    "sensor": {
+      "ordures_menageres": {
+        "name": "Ordures ménagères"
+      },
+      "recyclables": {
+        "name": "Déchets recyclables"
+      },
+      "next_collection": {
+        "name": "Prochaine collecte"
+      }
+    }
+  },
+  "issues": {
+    "data_outdated": {
+      "title": "Calendrier de collecte périmé ({zone})",
+      "description": "Le calendrier des collectes pour {zone} n'a plus de dates à venir (valable jusqu'au {valid_until}). Publiez le nouveau fichier collectes.json à l'adresse {url}, ou modifiez l'URL dans les options de l'intégration."
+    }
+  }
+}

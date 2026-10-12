@@ -1,0 +1,28 @@
+{
+  "entity": {
+    "binary_sensor": {
+      "take_out_bin": {
+        "default": "mdi:delete-empty-outline",
+        "state": {
+          "on": "mdi:delete-alert"
+        }
+      }
+    },
+    "calendar": {
+      "collections": {
+        "default": "mdi:calendar-sync"
+      }
+    },
+    "sensor": {
+      "ordures_menageres": {
+        "default": "mdi:trash-can"
+      },
+      "recyclables": {
+        "default": "mdi:recycle"
+      },
+      "next_collection": {
+        "default": "mdi:delete-clock"
+      }
+    }
+  }
+}
